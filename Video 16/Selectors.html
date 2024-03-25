@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /*div{
+       background-color: red;
+    }*/
+        .red {
+            background-color: red;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        /* Child Selectors */
+        div>p {
+            color: blue;
+            background-color: orange;
+        }
+
+        /* Descendant Selectors */
+        div
+
+        /*space */
+        p {
+            color: blue;
+            background-color: orange;
+        }
+
+        * {
+            /* Universal selector indicates all elements are marginized and padded using */
+            margin: 0;
+            padding: 0;
+        }
+
+        /*  or pseudo Selectors */
+        a:visited {
+            color: rgb(0, 255, 162);
+        }
+
+        a:link {
+            color: rgb(200, 133, 34);
+        }
+        a:active{
+            background-color: red;
+        }
+        div:hover{
+            background-color: chartreuse;
+        }
+        p:first-child{
+            background-color: aqua;
+             /* Wherever p is the parents first child it will aqua */
+        }
+        /* General Selectors */
+        p {
+            color: blue;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </main>
+    <div class="red">
+        I am a div
+        <article>
+            <p>
+                I am a para under div which defines Child Selectors..Now it is not direct child it is under article thus
+                wont attach the property.. Descendant selector would apply just remove >.
+            </p>
+        </article>
+        
+    </div>
+    <div id="green">
+        Hey hello world
+    </div>
+    <a href="https://www.google.com">Go to Google</a>
+   
+    <a href="https://www.facebook.com">Go to facebook</a>
+
+</body>
+
+</html>
