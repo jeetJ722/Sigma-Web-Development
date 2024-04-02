@@ -193,6 +193,70 @@ function circularbutton(){
 }
 var redbtn = new circularbutton("red");
 var greenbtn = new circularbutton("green");
+-------------------------------------------------------------------------
+first Class Functions:-
+A function that can be treated as normal values of variables that can be passed 
+ex:-setInterval(function(){})
+-------------------------------------------------------------------------
+new keyword:-whenever a new is added assume a blank object in mind its is used for constructor function
+-------------------------------------------------------------------------
+iife => immediately invoked function expression
+iife hai function ko turrant chalane ki kala,iss tareeke se ki humlog koi private variable bana paaye
+(function(){
+var a = 12;
+})()
+
+to access this iife:-
+var ans = (function(){
+var a = 12;
+return{
+    getter: function(){
+        console.log(a);
+    },
+    setter.function(val){
+        a = val;//hum isse value update kar paayenge.
+    }
+}
+})()
+this is how you use iife
+-------------------------------------------------------------------------
+prototype:-
+Every object created it gets prototype property automatically,javascript adds prototype.
+Prototype contains javascript helper functionsand helper methods which are part of prototype when object is created
+eg:arr.length;
 
 -------------------------------------------------------------------------
+Prototype Inheritance:-
+qualities inherited from prototypeor we get directly from parent class is known as inheritance now what is prototype inheritance 
+How it is done:
+var Human ={
+    canFly: false,
+    canTalk: true,
+    canWalk: true,
+}
+
+var sheriyansStudent{
+    canMakeAmazingWebsites: true,
+    canMakeAwesomeAnimations: true,
+}
+//now want to inherit from normal human object to sheriyansStudent so 
+sheriyansStudent.__proto__ = human;
+------------------------------------------------------------------------
+this call apply bind:-
+if a variable is inside {} braces then variable is local scope and if it is outside then it is called global scope
+
+if in global scope:-
+console.log(this); //this acts a window
+In function scope also it value is window:-
+function abcd(){
+    console.log(this);
+}
+now a function inside a method scope is called:-
+(function which we make inside an object,use method kehte hai)
+var obj={
+    baatkaro: function(){
+        console.log(this);//this acts as object
+    }
+}
+
 */
