@@ -258,6 +258,38 @@ var obj={
         console.log(this);//this acts as object
     }
 }
+-------------------------------------------------------------------------
+call apply bind:- 
+if we ave one function and an object and we want to implement function and by default not to keep this value as a window and point to an object
 
+function abcd(){
+    console.log(this);
+}
+val obj = {age: 24}
+abcd.call(obj);
+Yeh call waale cheez se this window ke badle obj ban jaayega
+now apply:
+function abcd(val1,val2,val3){
+    console.log(this);
+}
+val obj = {age: 24}
+abcd.apply(obj,[1,2,3]); //yeh apply hogaya same as that of call bas arguments ko array me paas karo
+-bind
+function abcd(){
+    console.log(this);
+}
+val obj = {age: 24}
+var bindedfnc = abcd.bind(obj);
+-------------------------------------------------------------------------
+pure & impure functions:- 
+-two things:-(for a pure function)
+(1)return always return same output for same input
+(2)it will never change/update the value of a global variable.
+Pure function:-
+function abcd(a,b){
+    return a*b;
+}
 
+var ans1 = abcd(1,2);
+var ans2 = abcd(1,2);
 */
